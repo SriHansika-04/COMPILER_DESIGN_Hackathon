@@ -2,9 +2,7 @@
 
 ## Project Overview
 
-GrammarFix is an educational application that demonstrates ambiguity
-in nested if-else statements and shows how grammar transformation
-resolves the dangling-else problem.
+GrammarFix is an educational application that demonstrates ambiguity in nested if-else statements and shows how grammar transformation resolves the dangling-else problem.
 
 ## Objectives
 
@@ -23,51 +21,66 @@ resolves the dangling-else problem.
 
 ## Supported Syntax
 
-Simple statements:
+**Simple statements:**
 
-    x;
+```text
+x;
+```
 
-Conditional statements:
+**Conditional statements:**
 
-    if (a) x;
+```text
+if (a) x;
+```
 
-Conditional statements with else:
+**Conditional statements with else:**
 
-    if (a) x; else y;
+```text
+if (a) x; else y;
+```
 
-Nested statements:
+**Nested statements:**
 
-    if (a) if (b) x; else y;
+```text
+if (a) if (b) x; else y;
+```
 
-The current implementation supports a restricted educational syntax.
-It is not a complete parser for C, Java, or Python.
+The current implementation supports a restricted educational syntax. It is not a complete parser for C, Java, or Python.
 
 ## Installation
 
 Create and activate a virtual environment:
 
-    python -m venv .venv
+```powershell
+python -m venv .venv
+```
 
-Windows PowerShell:
+Activate it in Windows PowerShell:
 
-    .\.venv\Scripts\Activate.ps1
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
 
 Install the required packages:
 
-    python -m pip install -r requirements.txt
+```powershell
+python -m pip install -r requirements.txt
+```
 
 ## Run Tests
 
-    python -m unittest discover -s . -p "test_*.py"
+```powershell
+python -m unittest discover -s . -p "test_*.py"
+```
 
 ## Run the Application
 
-    python -m streamlit run app.py
+```powershell
+python -m streamlit run app.py
+```
 
 Open the local address displayed in the terminal.
 
 ## Expected Demonstration
 
-For the classic dangling-else example, the original grammar should
-produce two valid interpretations. The transformed parser should
-associate the else with the nearest unmatched if.
+For the classic dangling-else example, the original grammar should produce two valid interpretations. The transformed parser should associate the `else` with the nearest unmatched `if`.
